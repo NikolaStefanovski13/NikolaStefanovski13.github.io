@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikola Stefanovski - Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <!-- Logo -->
+            <div class="logo">NIKO.DEVELOPER</div>
+            
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <!-- Navigation menu -->
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+<section id="hero" class="section hero">
+    <!-- Background particle effect -->
+    <div id="particle-bg" class="interactive-bg"></div>
+    
+    <!-- Floating tech elements effect -->
+    <div id="floating-elements"></div>
+    
+    <!-- Hero content -->
+    <div class="hero-content">
+        <h1>Nikola Stefanovski</h1>
+        <p>Full Stack Developer | Custom Software | Freelance</p>
+        <a href="#contact" class="cta-button">Let's Create Something Amazing!</a>
+    </div>
+</section>
+        <!-- About section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="/Picture.jpg" alt="Nikola Stefanovski" class="square-image">
+                    </div>
+                    <div class="about-text">
+                        <p class="about-description">With a diverse background in <span class="highlight">web & software development</span>, <span class="highlight">marketing</span>, and <span class="highlight">logistics</span>, I bring a unique blend of technical and business expertise to every project. From streamlining operations to crafting engaging digital experiences, I'm passionate about delivering innovative solutions that drive results.</p>
+                        <blockquote class="pull-quote">
+                            "Give a man a program, and he'll be frustrated for a day. Teach a man to program, and he'll be frustrated for a lifetime"
+                            <footer>- Unknown</footer>
+                        </blockquote>
+                        <div class="github-link">
+                            <a href="https://github.com/NikolaStefanovski13" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Check out my GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">My Digital Skills</h2>
+                <div id="circuit-board" class="circuit-board">
+                    <!-- The canvas will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        <!-- Services section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-service="web-development">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="fas fa-code service-icon"></i>
+                                <h3>Web Development</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3>Web Development</h3>
+                                <p>Custom websites tailored to your needs.</p>
+                                <ul>
+                                    <li>Responsive Design</li>
+                                    <li>E-commerce Solutions</li>
+                                    <li>Full Stack Website</li>
+                                </ul>
+                                <button class="learn-more">Contact Me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card" data-service="software-solutions">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="fas fa-laptop-code service-icon"></i>
+                                <h3>Software Solutions</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3>Software Solutions</h3>
+                                <p>Bespoke software for your business needs.</p>
+                                <ul>
+                                    <li>Custom Applications</li>
+                                    <li>API Development</li>
+                                    <li>Legacy System Integration</li>
+                                </ul>
+                                <button class="learn-more">Contact Me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card" data-service="digital-marketing">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="fas fa-chart-line service-icon"></i>
+                                <h3>Digital Marketing</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3>Digital Marketing</h3>
+                                <p>Boost your online presence and reach.</p>
+                                <ul>
+                                    <li>SEO Optimization</li>
+                                    <li>Social Media Campaigns</li>
+                                    <li>Content Strategy</li>
+                                </ul>
+                                <button class="learn-more">Contact Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Ready for your next project? Contact Me!</h2>
+                <div class="contact-clipboard">
+                    <div class="clipboard-content">
+                        <div class="contact-item" id="email-container">
+                            <i class="fas fa-envelope"></i>
+                            <span class="neon-text">Email: nklstfnvsk@gmail.com</span>
+                        </div>
+                        <div class="contact-item" id="phone-container">
+                            <i class="fas fa-phone"></i>
+                            <span class="neon-text">Phone: +33 6 51 87 07 27</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <canvas id="particleCanvas"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+</body>
+</html>
