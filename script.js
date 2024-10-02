@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: "Python", radius: 40 },
         { name: "JavaScript", radius: 40 },
         { name: "Marketing &\nAdvertising", radius: 45 },
-        { name: "Logistics\nManagement", radius: 45 },
+        { name: "Chrome Extension\nDevelopment", radius: 45 },
         { name: "Freelance\nServices", radius: 65 },
         { name: "Custom \nSoftware", radius: 65 }
     ];
