@@ -1,4 +1,4 @@
-// Particle effect
+// particle effect
 const particleBg = document.getElementById('particle-bg');
 const colors = ['#00ffaa', '#ff00ff', '#00ffff', '#ffff00'];
 
@@ -30,7 +30,7 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-// Matrix-like floating tech elements effect
+//floating tech elements effect
 const floatingElements = document.getElementById('floating-elements');
 const techElements = [
     '</>', '{...}', '()=>', 'npm', '#!/bin/bash', 'git push', 'docker run', 'import React', 'SELECT *', 'python3',
@@ -78,7 +78,7 @@ function addNewElements() {
     setTimeout(addNewElements, 1000);
 }
 
-// Mobile menu functionality
+// mobile menu 
 document.addEventListener('DOMContentLoaded', (event) => {
     const hamburger = document.querySelector(".hamburger-menu");
     const navMenu = document.querySelector(".nav-menu");
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         navMenu.classList.remove("active");
     }
 
-    // Initialize Matrix effect
+    // nmatrix effect
     initFloatingElements();
     addNewElements();
 });
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const dy = y - bubble.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < radius + bubble.radius) {
-                return true; // Collision detected
+                return true; // collision detected with bubles
             }
         }
         return false;
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
             bubble.x += bubble.vx;
             bubble.y += bubble.vy;
 
-            // Boundary checking
+            // boundary checking
             if (bubble.x - bubble.radius < 0 || bubble.x + bubble.radius > maxX) {
                 bubble.vx *= -1;
                 bubble.x = Math.max(bubble.radius, Math.min(bubble.x, maxX - bubble.radius));
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 bubble.y = Math.max(bubble.radius, Math.min(bubble.y, maxY - bubble.radius));
             }
 
-            // Collision detection
+            // collision detection
             for (let otherBubble of bubbles) {
                 if (bubble !== otherBubble) {
                     const dx = bubble.x - otherBubble.x;
@@ -188,14 +188,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         const ax = Math.cos(angle) * overlap * 0.5;
                         const ay = Math.sin(angle) * overlap * 0.5;
 
-                        // Move bubbles apart
+                        // move bubbles apart
                         bubble.x += ax;
                         bubble.y += ay;
                         otherBubble.x -= ax;
                         otherBubble.y -= ay;
-
-                        // Adjust velocities for smooth bounce
-                        const damping = 1; // Softness factor to control the velocity transfer
+                        
+                        const damping = 1; 
                         const vxTotal = bubble.vx - otherBubble.vx;
                         const vyTotal = bubble.vy - otherBubble.vy;
 
@@ -220,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     animateBubbles();
 
-    // Make bubbles draggable
     let isDragging = false;
     let dragTarget = null;
     let dragIndex = -1;
@@ -292,12 +290,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle "Learn More" button clicks
+  
     const buttons = document.querySelectorAll('.learn-more');
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
-            // Scroll to contact section
             const contactSection = document.getElementById('contact');
             if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -310,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//contact section
 
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('particleCanvas');
@@ -340,7 +336,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (this.size > 0.2) this.size -= 0.1;
 
-            // Reset particle if it's too small or out of bounds
             if (this.size <= 0.2 || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
                 this.reset();
             }
@@ -366,7 +361,6 @@ document.addEventListener('DOMContentLoaded', function() {
             particles[i].update();
             particles[i].draw();
 
-            // Connect particles close to mouse
             if (mousePosition.x != null && mousePosition.y != null) {
                 let dx = mousePosition.x - particles[i].x;
                 let dy = mousePosition.y - particles[i].y;
@@ -397,7 +391,6 @@ document.addEventListener('DOMContentLoaded', function() {
     createParticles();
     animateParticles();
 
-    // Responsive canvas
     window.addEventListener('resize', function() {
         canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
