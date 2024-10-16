@@ -372,7 +372,7 @@ nav ul li a.active::after {
 .square-image {
     width: 300px;
     height: 300px;
-    object-fit:scale-down;
+    object-fit:cover;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 255, 170, 0.3);
     transition: all 0.3s ease;
@@ -814,4 +814,47 @@ nav ul li a.active::after {
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+/* //upwork */
+.upwork-link {
+    margin-top: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.upwork-link a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--neon-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    border: 2px solid var(--neon-color);
+    border-radius: 5px;
+}
+
+.upwork-link a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.upwork-icon {
+    width: 1.6em;
+    height: 1.6em;
+    margin-right: 0.8rem;
+    fill: currentColor;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 5px var(--neon-color); }
+    50% { box-shadow: 0 0 20px var(--neon-color); }
+    100% { box-shadow: 0 0 5px var(--neon-color); }
+}
+
+.upwork-link a {
+    animation: glowPulse 2s infinite;
 }
