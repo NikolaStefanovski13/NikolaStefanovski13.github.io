@@ -464,34 +464,43 @@ nav ul li a.active::after {
     }
 }
 
-.github-link {
+/* Social Links Base Styles */
+.github-link, .linkedin-link, .upwork-link {
     margin-top: 3rem;
     animation: fadeIn 1.5s ease-out;
 }
 
-.github-link a {
+.github-link a, .linkedin-link a, .upwork-link a {
     display: inline-flex;
     align-items: center;
     color: var(--neon-color);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    font-size: 1.4rem; /* Increased font size */
-    padding: 10px 20px; /* Added padding for larger clickable area */
-    border: 2px solid var(--neon-color); /* Added border for more visibility */
-    border-radius: 5px; /* Rounded corners */
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    border: 2px solid var(--neon-color);
+    border-radius: 5px;
+    animation: glowPulse 2s infinite;
 }
 
-.github-link a:hover {
+.github-link a:hover, .linkedin-link a:hover, .upwork-link a:hover {
     color: var(--accent-color);
     text-shadow: 0 0 5px var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
-    transform: scale(1.05); /* Slight grow effect on hover */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
 }
 
-.github-link i {
-    margin-right: 0.8rem; /* Increased spacing between icon and text */
-    font-size: 1.6em; /* Larger icon */
+.github-link i, .linkedin-link i {
+    margin-right: 0.8rem;
+    font-size: 1.6em;
+}
+
+.upwork-link .upwork-icon {
+    margin-right: 0.8rem;
+    width: 1.6em;
+    height: 1.6em;
+    fill: currentColor;
 }
 
 /* Optional: Add a glow effect */
@@ -501,8 +510,25 @@ nav ul li a.active::after {
     100% { box-shadow: 0 0 5px var(--neon-color); }
 }
 
-.github-link a {
-    animation: glowPulse 2s infinite;
+/* Spacing between social links */
+.linkedin-link {
+    margin-top: 1rem; /* Reduced margin for closer spacing between links */
+}
+
+.upwork-link {
+    margin-top: 1rem; /* Reduced margin for closer spacing between links */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .github-link, .linkedin-link, .upwork-link {
+        margin-top: 2rem;
+    }
+
+    .github-link a, .linkedin-link a, .upwork-link a {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
 }
 
 /* Responsive styles for smaller screens */
